@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-		    xmlns:android="http://schemas.android.com/apk/res/android"
-        id = "com.vllaznia.app"
-        versionCode = "1600"
-        version = "3.0.0">
+		xmlns:android="http://schemas.android.com/apk/res/android"
+        id = "net.vllaznia.app"
+        versionCode = "1601"
+        version = "3.0.1">
     <name>Vllaznia</name>
 
     <description>
@@ -15,20 +15,33 @@
         Ingalb Company
     </author>
 
-	<content src="index.html"/>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <preference name="ScrollEnabled" value="false" />
+    <preference name="android-minSdkVersion" value="19" />
+    <preference name="BackupWebStorage" value="none" />
+    <preference name="SplashMaintainAspectRatio" value="true" />
+    <preference name="FadeSplashScreenDuration" value="300" />
+    <preference name="SplashShowOnlyFirstTime" value="false" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="3000" />
 	
     <preference name='phonegap-version' value='cli-9.0.0' />
 	
-    <gap:plugin name="cordova-plugin-device" source="npm"/>
-    <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
-    <gap:plugin name="cordova-plugin-network-information" source="npm" />
-    <gap:plugin name="cordova-plugin-statusbar" source="npm"/>
-    <gap:plugin name="cordova-plugin-splashscreen" source="npm"/>
-    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
-    <gap:plugin name="cordova-plugin-apprate" source="npm"/>
-    <plugin spec="https://github.com/ingalb/cordova-admob-pro.git" source="git"/>
-    <gap:plugin name="onesignal-cordova-plugin" source="npm" />
-    <gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
+    <plugin name="cordova-plugin-device" source="npm"/>
+    <plugin name="cordova-plugin-inappbrowser" source="npm" />
+    <plugin name="cordova-plugin-network-information" source="npm" />
+    <plugin name="cordova-plugin-statusbar" source="npm"/>
+    <plugin name="cordova-plugin-splashscreen" source="npm"/>
+    <plugin name="cordova-plugin-whitelist" source="npm" />
+    <plugin name="cordova-plugin-apprate" source="npm"/>
+    <plugin name="cordova-plugin-x-socialsharing" source="npm" />
     <plugin name="cordova-plugin-ionic-webview" source="npm" />
     <plugin name="cordova-plugin-ionic-keyboard" source="npm" />
     <plugin name="es6-promise-plugin" source="npm" />
@@ -42,19 +55,6 @@
     <preference name="fullscreen" value="false" />
     <preference name="android-minSdkVersion"      value="21" />              <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
     <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
-
-    <preference name="webviewbounce" value="false" />
-    <preference name="UIWebViewBounce" value="false" />
-    <preference name="DisallowOverscroll" value="true" />
- <!--   <preference name="auto-hide-splash-screen" value="true" />-->
-    <preference name="AutoHideSplashScreen" value="false" />	
-    <!--	<preference name="splash-screen-duration" value="500000" />-->
-    <preference name="SplashScreenDelay" value="3000"/>
-    <preference name="FadeSplashScreen" value="false"/>
-    <preference name="ShowSplashScreenSpinner" value="false" />
-
-	
-
    
     <icon src="icon.png" />
     <splash src="splash.png" />
@@ -98,24 +98,6 @@
 <splash platform="ios" src="res/screen/ios/Default@2x~universal~anyany.png" />
 <splash platform="ios" src="res/screen/ios/Default@3x~universal~anyany.png" />	
 -->
-
-    <access origin="*"/>
-    <access origin="ingalb.info" subdomains="true"/>
-    <access origin="ingalb.com" subdomains="true"/>
-    <access origin="albaniasoccer.com" subdomains="true"/>
-    <access origin="fkvllaznia.net" subdomains="true"/>
-    <access origin="heroku.com/" subdomains="true"/>
-    <access origin="googleapis.com" subdomains="true"/>
-
-	<allow-navigation href="*" />
-	<allow-navigation href="data:*" />
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
-    <allow-intent href="tel:*" />
-    <allow-intent href="sms:*" />
-    <allow-intent href="mailto:*" />
-    <allow-intent href="geo:*" />
-	<allow-intent href="*" />
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
