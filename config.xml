@@ -4,7 +4,7 @@
 		xmlns:android="http://schemas.android.com/apk/res/android"
         id = "net.vllaznia.app"
         versionCode = "1601"
-        version = "3.0.1">
+        version = "3.0.2">
     <name>Vllaznia</name>
 
     <description>
