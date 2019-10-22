@@ -55,7 +55,11 @@
     <plugin name="cordova-plugin-ionic-webview" source="npm" />
     <plugin name="cordova-plugin-ionic-keyboard" source="npm" />
     <plugin name="es6-promise-plugin" source="npm" />
-
+    <plugin name="cordova-plugin-nativestorage" source="npm" />
+    <plugin name="cordova-plugin-globalization" source="npm" />
+    <plugin name="cordova-plugin-dialogs" source="npm" />
+	
+	
 
 
     <preference name="permissions"  value="none"/>
