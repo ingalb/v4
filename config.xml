@@ -16,22 +16,6 @@
     </author>
 
     <content src="index.html" />
-    <access origin="*" />
-    <access origin="tel:*" launch-external="yes" />
-    <access origin="mailto:*" launch-external="yes" />
-    <access origin="geo:*" launch-external="yes" />
-
-    <allow-navigation href="cdvfile:*" />
-    <allow-navigation href="content:*" />
-    <allow-navigation href="data:*" />
-    <allow-navigation href="*" />
-    <allow-navigation href="localhost" />
-
-    <allow-intent href="*" />
-    <allow-intent href="tel:*" />
-    <allow-intent href="sms:*" />
-    <allow-intent href="mailto:*" />
-    <allow-intent href="geo:*" />
 	
     <preference name="ScrollEnabled" value="false" />
     <preference name="android-minSdkVersion" value="19" />
@@ -112,6 +96,25 @@
 <splash platform="ios" src="res/screen/ios/Default@2x~universal~anyany.png" />
 <splash platform="ios" src="res/screen/ios/Default@3x~universal~anyany.png" />	
 -->
+	
+    <access origin="*" />
+    <access origin="tel:*" launch-external="yes" />
+    <access origin="mailto:*" launch-external="yes" />
+    <access origin="geo:*" launch-external="yes" />
+
+    <allow-navigation href="cdvfile:*" />
+    <allow-navigation href="content:*" />
+    <allow-navigation href="data:*" />
+    <allow-navigation href="*" />
+    <allow-navigation href="localhost*" />
+
+    <allow-intent href="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
