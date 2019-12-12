@@ -41,9 +41,6 @@ MIT
 @ionic-native/core
 MIT
 
-@ionic-native/social-sharing
-MIT
-
 @ionic-native/splash-screen
 MIT
 
