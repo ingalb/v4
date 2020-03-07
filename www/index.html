@@ -15,6 +15,30 @@
 
   <link rel="icon" type="image/png" href="assets/icon/favicon.png" />
   
+  <script>
+  (function () {
+    'use strict';
+
+    var EvTarget = EventTarget || Element; // EventTarget doesn't exist in iOS 8 and 9.
+
+    window.addEventListener = function () {
+      EvTarget.prototype.addEventListener.apply(this, arguments);
+    };
+
+    window.removeEventListener = function () {
+      EvTarget.prototype.removeEventListener.apply(this, arguments);
+    };
+
+    document.addEventListener = function () {
+      EvTarget.prototype.addEventListener.apply(this, arguments);
+    };
+
+    document.removeEventListener = function () {
+      EvTarget.prototype.removeEventListener.apply(this, arguments);
+    };
+  })();
+  </script>
+  
   <script src="cordova.js"></script>
 
   <!-- add to homescreen for ios -->
