@@ -1108,8 +1108,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
     let VllazniaService = class VllazniaService {
       constructor(http) {
-        this.http = http; //apiUrl = 'http://api.albaniasoccer.com/';
-
+        this.http = http;
+        this.APP_ID = 1;
+        this.apiUrl = 'http://api.albaniasoccer.com/';
         this.apiNews = 'https://www.fkvllaznia.net/main/app/'; // Http Headers
 
         this.httpOptions = {
@@ -1129,9 +1130,28 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError('getHomeNews', [])));
       }
 
+      getNrNews(from) {
+        return this.http.get(this.apiNews + 'lajme.php?from=' + from).pipe( //tap(_ => this.log('fetched news')),
+        Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError('getHomeNews', [])));
+      }
+
       getInfoNews(newsId) {
         return this.http.get(this.apiNews + 'lajme.php?id=' + newsId).pipe( //tap(_ => this.log('fetched news')),
         Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError('getHomeNews', [])));
+      }
+      /* */
+      //getAllEkipi(sezoniId, ekipiId) {
+      //  $http.get(URL_APP+'ekipi.php',{params:{id: sezoniId, ekipi: ekipiId, app_id: APP_ID}}).success(
+
+
+      getAllEkipi(sezoniId, ekipiId) {
+        return this.http.get(this.apiUrl + 'ekipi.php', {
+          params: {
+            id: sezoniId,
+            ekipi: ekipiId
+          }
+        }).pipe( //tap(_ => this.log('fetched news')),
+        Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError('getEkipiAll', [])));
       }
 
       handleError(operation = 'operation', result) {

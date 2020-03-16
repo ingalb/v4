@@ -15,7 +15,7 @@
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-header>\r\n  <ion-toolbar color=\"primary\">\r\n    <ion-buttons slot=\"start\">\r\n      <ion-menu-button></ion-menu-button>\r\n    </ion-buttons>\r\n    <ion-title color=\"tertiary\">\r\n      Lajme\r\n    </ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n  <div *ngIf=\"!isLoaded\">\r\n    <ion-list>\r\n      <ion-item *ngFor=\"let item of arrayOne(20)\">\r\n        <ion-avatar slot=\"start\">\r\n          <ion-skeleton-text animated></ion-skeleton-text>\r\n        </ion-avatar>\r\n        <ion-label>\r\n          <h2>\r\n            <ion-skeleton-text animated style=\"width: 90%\"></ion-skeleton-text>\r\n          </h2>\r\n          <p>\r\n            <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\r\n          </p>\r\n        </ion-label>\r\n      </ion-item>\r\n    </ion-list>\r\n\r\n  </div>\r\n\r\n  <div *ngIf=\"!isLoaded\">\r\n    <ion-list>\r\n      <ion-item *ngFor=\"let item of arrayOne(20)\">\r\n        <ion-avatar slot=\"start\">\r\n          <ion-skeleton-text animated></ion-skeleton-text>\r\n        </ion-avatar>\r\n        <ion-label>\r\n          <h2>\r\n            <ion-skeleton-text animated style=\"width: 90%\"></ion-skeleton-text>\r\n          </h2>\r\n          <p>\r\n            <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\r\n          </p>\r\n        </ion-label>\r\n      </ion-item>\r\n    </ion-list>\r\n\r\n  </div>\r\n\r\n\r\n  <div *ngIf=\"isLoaded\">\r\n    <ion-list>\r\n      <ion-item *ngFor=\"let item of news\" [routerLink]=\"item.id\">\r\n        <ion-avatar slot=\"start\">\r\n          <img src=\"https://www.fkvllaznia.net/main/vllaznia/_files/newspublish/{{item.image}}\"\r\n            style=\"background: #F2F2F2;\">\r\n        </ion-avatar>\r\n        <ion-label class=\"ion-text-capitalize\">\r\n          <h2>{{ item.title }}</h2>\r\n          <p>{{ item.summary }}</p>\r\n        </ion-label>\r\n      </ion-item>\r\n    </ion-list>\r\n  </div>\r\n\r\n\r\n  <!--\r\n  <ion-infinite-scroll threshold=\"100px\" (ionInfinite)=\"loadNews($event)\">\r\n    <ion-infinite-scroll-content\r\n      loadingSpinner=\"bubbles\"\r\n      loadingText=\"Loading more data...\">\r\n    </ion-infinite-scroll-content>\r\n  </ion-infinite-scroll>\r\n-->\r\n</ion-content>";
+    __webpack_exports__["default"] = "<ion-header>\r\n  <ion-toolbar color=\"primary\">\r\n    <ion-buttons slot=\"start\">\r\n      <ion-menu-button></ion-menu-button>\r\n    </ion-buttons>\r\n    <ion-title color=\"tertiary\">\r\n      Lajme\r\n    </ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n  <div *ngIf=\"!isLoaded\">\r\n    <ion-list>\r\n      <ion-item *ngFor=\"let item of arrayOne(20)\">\r\n        <ion-avatar slot=\"start\">\r\n          <ion-skeleton-text animated></ion-skeleton-text>\r\n        </ion-avatar>\r\n        <ion-label>\r\n          <h2>\r\n            <ion-skeleton-text animated style=\"width: 90%\"></ion-skeleton-text>\r\n          </h2>\r\n          <p>\r\n            <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\r\n          </p>\r\n        </ion-label>\r\n      </ion-item>\r\n    </ion-list>\r\n\r\n  </div>\r\n\r\n  <div *ngIf=\"isLoaded\">\r\n  <ion-virtual-scroll [items]=\"news\">\r\n    <ion-item *virtualItem=\"let item\" [routerLink]=\"item.id\">\r\n      <ion-avatar slot=\"start\">\r\n        <img src=\"https://www.fkvllaznia.net/main/vllaznia/_files/newspublish/{{item.image}}\"\r\n          style=\"background: #F2F2F2;\">\r\n      </ion-avatar>\r\n      <ion-label class=\"ion-text-capitalize\">\r\n        <h2>{{ item.title }}</h2>\r\n        <p>{{ item.summary }}</p>\r\n      </ion-label>\r\n    </ion-item>\r\n  </ion-virtual-scroll>\r\n\r\n  <!-- <ion-list>\r\n    <ion-item *ngFor=\"let item of news\" [routerLink]=\"item.id\">\r\n      <ion-avatar slot=\"start\">\r\n        <img src=\"https://www.fkvllaznia.net/main/vllaznia/_files/newspublish/{{item.image}}\"\r\n          style=\"background: #F2F2F2;\">\r\n      </ion-avatar>\r\n      <ion-label class=\"ion-text-capitalize\">\r\n        <h2>{{ item.title }}</h2>\r\n        <p>{{ item.summary }}</p>\r\n      </ion-label>\r\n    </ion-item>\r\n  </ion-list> -->\r\n\r\n  </div>\r\n\r\n  <div *ngIf=\"!isLoaded\">\r\n    <ion-list>\r\n      <ion-item *ngFor=\"let item of arrayOne(20)\">\r\n        <ion-avatar slot=\"start\">\r\n          <ion-skeleton-text animated></ion-skeleton-text>\r\n        </ion-avatar>\r\n        <ion-label>\r\n          <h2>\r\n            <ion-skeleton-text animated style=\"width: 90%\"></ion-skeleton-text>\r\n          </h2>\r\n          <p>\r\n            <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\r\n          </p>\r\n        </ion-label>\r\n      </ion-item>\r\n    </ion-list>\r\n\r\n  </div>\r\n\r\n  <ion-infinite-scroll threshold=\"100px\" (ionInfinite)=\"loadNews($event)\">\r\n    <ion-infinite-scroll-content\r\n      loadingSpinner=\"bubbles\"\r\n      loadingText=\"Duke ngarkuar lajmet...\">\r\n    </ion-infinite-scroll-content>\r\n  </ion-infinite-scroll>\r\n\r\n</ion-content>";
     /***/
   },
 
@@ -149,11 +149,15 @@
 
     var _api_vllaznia_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! ../api/vllaznia.service */
-    "./src/app/api/vllaznia.service.ts"); //import { IonInfiniteScroll } from '@ionic/angular';
+    "./src/app/api/vllaznia.service.ts");
+    /* harmony import */
 
+
+    var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @ionic/angular */
+    "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
 
     let NewsPage = class NewsPage {
-      //@ViewChild(IonInfiniteScroll) infiniteScroll: IonInfiniteScroll;
       constructor(NewsService) {
         this.NewsService = NewsService;
         this.offset = 0;
@@ -165,21 +169,21 @@
         this.loadNews();
       }
 
-      loadNews(loadMore = false, event) {
-        if (loadMore) {
+      loadNews(event) {
+        if (event) {
           this.offset += 10;
         }
 
-        this.NewsService.getAllNews().subscribe(news => {
-          //this.news = [...this.news, ...news];
-          console.log(this.isLoaded);
-          console.log(news);
+        this.NewsService.getNrNews(this.offset).subscribe(news => {
           this.news = news;
           this.isLoaded = true;
-          console.log(this.isLoaded);
 
           if (event) {
             event.target.complete();
+          }
+
+          if (this.news.length == 1000) {
+            event.target.disabled = true;
           }
         });
       }
@@ -194,6 +198,12 @@
       type: _api_vllaznia_service__WEBPACK_IMPORTED_MODULE_2__["VllazniaService"]
     }];
 
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_ionic_angular__WEBPACK_IMPORTED_MODULE_3__["IonInfiniteScroll"], {
+      static: true
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["IonInfiniteScroll"])], NewsPage.prototype, "infiniteScroll", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_ionic_angular__WEBPACK_IMPORTED_MODULE_3__["IonVirtualScroll"], {
+      static: true
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["IonVirtualScroll"])], NewsPage.prototype, "virtualScroll", void 0);
     NewsPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-news',
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(

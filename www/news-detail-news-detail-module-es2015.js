@@ -124,7 +124,6 @@ let NewsDetailPage = class NewsDetailPage {
     ngOnInit() {
         this.newsId = this.activatedRoute.snapshot.paramMap.get('id');
         this.loadInfoNews();
-        //this.isLoaded = true;
     }
 };
 NewsDetailPage.ctorParameters = () => [
