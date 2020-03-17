@@ -660,7 +660,7 @@ let VllazniaService = class VllazniaService {
     constructor(http) {
         this.http = http;
         this.APP_ID = 1;
-        this.apiUrl = 'http://api.albaniasoccer.com/';
+        this.apiUrl = 'https://superliga-app.herokuapp.com/';
         this.apiNews = 'https://www.fkvllaznia.net/main/app/';
         // Http Headers
         this.httpOptions = {

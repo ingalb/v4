@@ -120,6 +120,9 @@ let NewsPage = class NewsPage {
     arrayOne(n) {
         return Array(n);
     }
+    ionViewWillEnter() {
+        this.loadNews();
+    }
 };
 NewsPage.ctorParameters = () => [
     { type: _api_vllaznia_service__WEBPACK_IMPORTED_MODULE_2__["VllazniaService"] }

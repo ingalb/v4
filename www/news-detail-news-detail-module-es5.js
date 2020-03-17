@@ -93,8 +93,7 @@
     }];
     let NewsDetailPageModule = class NewsDetailPageModule {};
     NewsDetailPageModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_6__["IonicModule"], ionic_header_parallax__WEBPACK_IMPORTED_MODULE_5__["IonicHeaderParallaxModule"], //ParallaxHeaderDirective,
-      _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forChild(routes)],
+      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_6__["IonicModule"], ionic_header_parallax__WEBPACK_IMPORTED_MODULE_5__["IonicHeaderParallaxModule"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forChild(routes)],
       declarations: [_news_detail_page__WEBPACK_IMPORTED_MODULE_7__["NewsDetailPage"]]
     })], NewsDetailPageModule);
     /***/
@@ -169,6 +168,7 @@
       constructor(NewsService, activatedRoute) {
         this.NewsService = NewsService;
         this.activatedRoute = activatedRoute;
+        this.imgsrc = "https://www.fkvllaznia.net/main/vllaznia/_files/newspublish/lajme-vllaznia.gif";
         this.isLoaded = false;
       }
 
@@ -193,6 +193,10 @@
 
       ngOnInit() {
         this.newsId = this.activatedRoute.snapshot.paramMap.get('id');
+        this.loadInfoNews();
+      }
+
+      ionViewWillEnter() {
         this.loadInfoNews();
       }
 

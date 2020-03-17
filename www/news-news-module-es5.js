@@ -192,6 +192,10 @@
         return Array(n);
       }
 
+      ionViewWillEnter() {
+        this.loadNews();
+      }
+
     };
 
     NewsPage.ctorParameters = () => [{

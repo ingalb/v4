@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\r\n  <ion-toolbar color=\"primary\">\r\n    <ion-buttons slot=\"start\">\r\n      <ion-menu-button></ion-menu-button>\r\n    </ion-buttons>\r\n    <ion-title color=\"tertiary\">\r\n      Vllazia App\r\n    </ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n  <ion-slides #homeSlider dynamicBullets=\"true\">\r\n  <ion-slide *ngFor=\"let b of news\">\r\n      <ion-card color=\"secondary\" class=\"welcome-card\" [routerLink]=\"['/news/', b.id]\">\r\n        <img src=\"https://www.fkvllaznia.net/main/vllaznia/_files/newspublish/{{ b.image }}\" alt=\"\" />\r\n        <ion-card-header>\r\n          <ion-card-title>{{ b.title }}</ion-card-title>\r\n        </ion-card-header>\r\n        <ion-card-content>\r\n          <p>{{ b.summary }}</p>\r\n        </ion-card-content>\r\n      </ion-card>\r\n  </ion-slide>\r\n\r\n  </ion-slides>\r\n\r\n  <ion-item color=\"primary\">\r\n    <ion-label>\r\n    Ndeshjet e fundit\r\n    </ion-label>\r\n  </ion-item>\r\n\r\n    \r\n</ion-content>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\r\n  <ion-toolbar color=\"primary\">\r\n    <ion-buttons slot=\"start\">\r\n      <ion-menu-button></ion-menu-button>\r\n    </ion-buttons>\r\n    <ion-title color=\"tertiary\">\r\n      Vllazia App\r\n    </ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n  <ion-slides #homeSlider pager=\"true\">\r\n  <ion-slide *ngFor=\"let b of news\">\r\n      <ion-card color=\"secondary\" class=\"welcome-card\" [routerLink]=\"['/news/', b.id]\">\r\n        <img src=\"https://www.fkvllaznia.net/main/vllaznia/_files/newspublish/{{ b.image }}\" alt=\"\" />\r\n        <ion-card-header>\r\n          <ion-card-title>{{ b.title }}</ion-card-title>\r\n        </ion-card-header>\r\n        <ion-card-content>\r\n          <p>{{ b.summary }}</p>\r\n        </ion-card-content>\r\n      </ion-card>\r\n  </ion-slide>\r\n\r\n  </ion-slides>\r\n\r\n  <ion-item color=\"primary\">\r\n    <ion-label>\r\n    Ndeshjet e fundit\r\n    </ion-label>\r\n  </ion-item>\r\n\r\n    \r\n</ion-content>\r\n");
 
 /***/ }),
 
@@ -116,7 +116,7 @@ let HomePage = class HomePage {
         console.log("On Init");
     }
     ionViewWillEnter() {
-        //this.getHomepageNews();
+        this.getHomepageNews();
         console.log("ionViewDidLoad");
     }
 };

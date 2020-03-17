@@ -732,6 +732,10 @@ const routes = [
         path: 'ekipi',
         loadChildren: () => Promise.all(/*! import() | ekipi-ekipi-module */[__webpack_require__.e("common"), __webpack_require__.e("ekipi-ekipi-module")]).then(__webpack_require__.bind(null, /*! ./ekipi/ekipi.module */ "./src/app/ekipi/ekipi.module.ts")).then(m => m.EkipiPageModule)
     },
+    {
+        path: 'ekipi/:id',
+        loadChildren: () => __webpack_require__.e(/*! import() | ekipi-detail-ekipi-detail-module */ "ekipi-detail-ekipi-detail-module").then(__webpack_require__.bind(null, /*! ./ekipi-detail/ekipi-detail.module */ "./src/app/ekipi-detail/ekipi-detail.module.ts")).then(m => m.EkipiDetailPageModule)
+    },
 ];
 let AppRoutingModule = class AppRoutingModule {
 };

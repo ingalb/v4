@@ -54,7 +54,6 @@ NewsDetailPageModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_6__["IonicModule"],
             ionic_header_parallax__WEBPACK_IMPORTED_MODULE_5__["IonicHeaderParallaxModule"],
-            //ParallaxHeaderDirective,
             _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forChild(routes)
         ],
         declarations: [_news_detail_page__WEBPACK_IMPORTED_MODULE_7__["NewsDetailPage"]]
@@ -101,6 +100,7 @@ let NewsDetailPage = class NewsDetailPage {
     constructor(NewsService, activatedRoute) {
         this.NewsService = NewsService;
         this.activatedRoute = activatedRoute;
+        this.imgsrc = "https://www.fkvllaznia.net/main/vllaznia/_files/newspublish/lajme-vllaznia.gif";
         this.isLoaded = false;
     }
     loadInfoNews() {
@@ -123,6 +123,9 @@ let NewsDetailPage = class NewsDetailPage {
     }
     ngOnInit() {
         this.newsId = this.activatedRoute.snapshot.paramMap.get('id');
+        this.loadInfoNews();
+    }
+    ionViewWillEnter() {
         this.loadInfoNews();
     }
 };
